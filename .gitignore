@@ -1,6 +1,9 @@
 .gradle
 **/build/
 !src/**/build/
+/run/
+/.idea/
+/CREDITS.txt
 
 # Ignore Gradle GUI config
 gradle-app.setting
