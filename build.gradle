@@ -4,6 +4,7 @@ plugins {
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '[6.0,6.2)'
     id 'org.parchmentmc.librarian.forgegradle' version '1.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
 version = mod_version
@@ -12,6 +13,13 @@ group = mod_group_id
 base {
     archivesName = mod_id
 }
+
+mixin {
+    add sourceSets.main, "${mod_id}.refmap.json"
+
+    config "${mod_id}.mixins.json"
+}
+
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
@@ -121,9 +129,12 @@ repositories {
     // flatDir {
     //     dir 'libs'
     // }
-    maven {
-        url "https://cursemaven.com"
-    }
+    maven { url "https://cursemaven.com" }
+    maven { url = "https://server.cjsah.net:1002/maven" }
+    maven { url = "https://api.modrinth.com/maven" }
+    maven { url = "https://maven.architectury.dev/" }
+    maven { url = "https://maven.tterrag.com/" }
+    maven { url = "https://maven.blamejared.com/" }
 }
 
 dependencies {
@@ -135,9 +146,12 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     // Example mod dependency with JEI - using fg.deobf() ensures the dependency is remapped to your development mappings
     // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-common-api:${jei_version}")
-    // compileOnly fg.deobf("mezz.jei:jei-${mc_version}-forge-api:${jei_version}")
-    // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
+    implementation fg.deobf("dev.dubhe:anvilcraft-forge-1.20.1:1.4.1+pre-release.1")
+    implementation fg.deobf("dev.anvilcraft.lib:anvillib-forge-1.20.1:1.0.0+build.99")
+    implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${minecraft_version}:0.6.11-13")
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
@@ -148,6 +162,9 @@ dependencies {
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
     implementation fg.deobf("curse.maven:create-328085:5838779")
+    implementation fg.deobf("com.tterrag.registrate:Registrate:MC1.20-1.3.3")
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

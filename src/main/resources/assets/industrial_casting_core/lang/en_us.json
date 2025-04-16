@@ -1,4 +1,10 @@
 {
   "item.industrial_casting_core.sugarcane_juice_bucket": "Sugarcane Juice Bucket",
-  "fluid.industrial_casting_core.sugarcane_juice": "Sugarcane Juice"
+  "fluid.industrial_casting_core.sugarcane_juice": "Sugarcane Juice",
+  "block.industrial_casting_core.electrolysis": "High-Energy Processor",
+  "create.recipe.electrolysis": "High-Energy Processing",
+  "industrial_casting_core.recipe.assembly.electrolysis": "High-Energy Processing",
+  "industrial_casting_core.tooltip.electrolysis.header": "High-Energy Processing Info",
+  "industrial_casting_core.tooltip.electrolysis.required_laser_level": "Required Laser Strength：%1$s",
+  "industrial_casting_core.tooltip.electrolysis.current_laser_level": "Current Laser Strength：%1$s"
 }

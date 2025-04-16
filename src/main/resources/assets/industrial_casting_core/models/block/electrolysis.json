@@ -1,0 +1,194 @@
+{
+	"credit": "Made with Blockbench",
+	"render_type": "minecraft:translucent",
+	"parent": "minecraft:block/block",
+	"textures": {
+		"0": "industrial_casting_core:block/electrolysis",
+		"particle": "industrial_casting_core:block/electrolysis"
+	},
+	"elements": [
+		{
+			"name": "basement",
+			"from": [1, 12, 1],
+			"to": [15, 16, 15],
+			"rotation": {"angle": 0, "axis": "y", "origin": [1, 12, 1]},
+			"faces": {
+				"north": {"uv": [0, 7, 7, 9], "texture": "#0"},
+				"east": {"uv": [0, 7, 7, 9], "texture": "#0"},
+				"south": {"uv": [0, 7, 7, 9], "texture": "#0"},
+				"west": {"uv": [0, 7, 7, 9], "texture": "#0"},
+				"up": {"uv": [0, 0, 7, 7], "texture": "#0"},
+				"down": {"uv": [0, 0, 7, 7], "texture": "#0"}
+			}
+		},
+		{
+			"name": "receiver_crystal",
+			"from": [5, 4, 5],
+			"to": [11, 12, 11],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5, 4, 5]},
+			"faces": {
+				"north": {"uv": [7, 0, 10, 4], "texture": "#0"},
+				"east": {"uv": [7, 0, 10, 4], "texture": "#0"},
+				"south": {"uv": [7, 0, 10, 4], "texture": "#0"},
+				"west": {"uv": [7, 0, 10, 4], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "casing",
+			"from": [3, 4, 3],
+			"to": [5, 12, 5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3, 4, 3]},
+			"faces": {
+				"north": {"uv": [4, 1.5, 3, 5.5], "texture": "#0"},
+				"east": {"uv": [3, 1.5, 4, 5.5], "texture": "#0"},
+				"south": {"uv": [4, 1.5, 3, 5.5], "texture": "#0"},
+				"west": {"uv": [3, 1.5, 4, 5.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "casing",
+			"from": [3, 4, 11],
+			"to": [5, 12, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3, 4, 11]},
+			"faces": {
+				"north": {"uv": [3, 1.5, 4, 5.5], "texture": "#0"},
+				"east": {"uv": [4, 1.5, 3, 5.5], "texture": "#0"},
+				"south": {"uv": [4, 1.5, 3, 5.5], "texture": "#0"},
+				"west": {"uv": [3, 1.5, 4, 5.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "casing",
+			"from": [11, 4, 3],
+			"to": [13, 12, 5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 4, 3]},
+			"faces": {
+				"north": {"uv": [4, 1.5, 3, 5.5], "texture": "#0"},
+				"east": {"uv": [3, 1.5, 4, 5.5], "texture": "#0"},
+				"south": {"uv": [4, 1.5, 3, 5.5], "texture": "#0"},
+				"west": {"uv": [4, 1.5, 3, 5.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "casing",
+			"from": [11, 4, 11],
+			"to": [13, 12, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [11, 4, 11]},
+			"faces": {
+				"north": {"uv": [4, 1.5, 3, 5.5], "texture": "#0"},
+				"east": {"uv": [4, 1.5, 3, 5.5], "texture": "#0"},
+				"south": {"uv": [3, 1.5, 4, 5.5], "texture": "#0"},
+				"west": {"uv": [3, 1.5, 4, 5.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "plate",
+			"from": [3, 2, 3],
+			"to": [13, 4, 13],
+			"rotation": {"angle": 0, "axis": "y", "origin": [3, 2, 3]},
+			"faces": {
+				"north": {"uv": [1, 6, 6, 7], "texture": "#0"},
+				"east": {"uv": [1, 6, 6, 7], "texture": "#0"},
+				"south": {"uv": [1, 6, 6, 7], "texture": "#0"},
+				"west": {"uv": [1, 6, 6, 7], "texture": "#0"},
+				"up": {"uv": [7, 4, 12, 9], "texture": "#0"},
+				"down": {"uv": [7, 4, 12, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "generator_casing",
+			"from": [6, 0, 6],
+			"to": [7, 2, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 0, 6]},
+			"faces": {
+				"north": {"uv": [13.5, 5, 14, 4], "texture": "#0"},
+				"east": {"uv": [12.5, 4, 14, 5], "texture": "#0"},
+				"south": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"west": {"uv": [12, 5, 13.5, 4], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [12.5, 4, 14, 4.5], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "generator_casing",
+			"from": [9, 0, 7],
+			"to": [10, 2, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [9, 0, 7]},
+			"faces": {
+				"north": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"east": {"uv": [12, 5, 13.5, 4], "texture": "#0"},
+				"south": {"uv": [13.5, 5, 14, 4], "texture": "#0"},
+				"west": {"uv": [12.5, 4, 14, 5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [12, 4, 13.5, 4.5], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "generator_casing",
+			"from": [7, 0, 6],
+			"to": [10, 2, 7],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 0, 6]},
+			"faces": {
+				"north": {"uv": [12, 5, 13.5, 4], "texture": "#0"},
+				"east": {"uv": [13.5, 5, 14, 4], "texture": "#0"},
+				"south": {"uv": [12.5, 4, 14, 5], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [12.5, 4, 14, 4.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "generator_casing",
+			"from": [6, 0, 9],
+			"to": [9, 2, 10],
+			"rotation": {"angle": 0, "axis": "y", "origin": [6, 0, 9]},
+			"faces": {
+				"north": {"uv": [12.5, 4, 14, 5], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"south": {"uv": [12, 5, 13.5, 4], "texture": "#0"},
+				"west": {"uv": [13.5, 5, 14, 4], "texture": "#0"},
+				"up": {"uv": [0, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [12, 4, 13.5, 4.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "generator_crystal",
+			"from": [7, 1, 7],
+			"to": [9, 1, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 1, 7]},
+			"faces": {
+				"down": {"uv": [12, 5, 13, 6], "texture": "#0"}
+			}
+		}
+	],
+	"groups": [
+		{
+			"name": "group",
+			"origin": [1, 12, 1],
+			"color": 0,
+			"children": []
+		},
+		0,
+		1,
+		2,
+		3,
+		4,
+		5,
+		6,
+		7,
+		8,
+		9,
+		10,
+		11
+	]
+}

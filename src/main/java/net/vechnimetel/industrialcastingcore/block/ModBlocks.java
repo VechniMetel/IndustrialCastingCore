@@ -15,6 +15,7 @@ public class ModBlocks {
     private static final DeferredRegister<Block> BLOCKS;
 
     public static final RegistryObject<LiquidBlock> SUGARCANE_JUICE;
+    public static final RegistryObject<ElectrolysisBlock> ELECTROLYSIS;
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
@@ -26,5 +27,6 @@ public class ModBlocks {
         SUGARCANE_JUICE = BLOCKS.register("sugarcane_juice",() -> new LiquidBlock(
                 ModFluids.SUGARCANE_JUICE_SOURCE, BlockBehaviour.Properties.copy(Blocks.WATER)
         ));
+        ELECTROLYSIS = BLOCKS.register("electrolysis", ElectrolysisBlock::new);
     }
 }

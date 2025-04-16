@@ -1,0 +1,65 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "minecraft:coal"
+  },
+  "loops": 3,
+  "results": [
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:dirt"
+        },
+        {
+          "item": "minecraft:gold_nugget"
+        }
+      ],
+      "results": [
+        {
+          "item": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "type": "industrial_casting_core:electrolysis",
+      "ingredients": [
+        {
+          "item": "minecraft:dirt"
+        },
+        {
+          "item": "minecraft:glass"
+        }
+      ],
+      "results": [
+        {
+          "item": "minecraft:dirt"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "minecraft:dirt"
+        },
+        {
+          "item": "minecraft:gold_nugget"
+        }
+      ],
+      "results": [
+        {
+          "item": "minecraft:dirt"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "minecraft:dirt"
+  }
+}

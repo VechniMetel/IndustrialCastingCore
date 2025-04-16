@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "light_level=none": {
+      "model": "industrial_casting_core:block/electrolysis_dark"
+    },
+    "light_level=dim": {
+      "model": "industrial_casting_core:block/electrolysis"
+    },
+    "light_level=bright": {
+      "model": "industrial_casting_core:block/electrolysis"
+    }
+  }
+}

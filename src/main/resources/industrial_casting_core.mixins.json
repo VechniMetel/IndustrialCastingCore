@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.vechnimetel.industrialcastingcore.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "windowtitlemodification.refmap.json",
+  "mixins": [
+    "BaseLaserBlockEntityMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
