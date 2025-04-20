@@ -1,13 +1,11 @@
 package net.vechnimetel.industrialcastingcore.jei;
 
-import com.simibubi.create.AllRecipeTypes;
 import com.simibubi.create.Create;
 import com.simibubi.create.compat.jei.CreateJEI;
 import com.simibubi.create.compat.jei.DoubleItemIcon;
 import com.simibubi.create.compat.jei.EmptyBackground;
 import com.simibubi.create.compat.jei.ItemIcon;
 import com.simibubi.create.compat.jei.category.CreateRecipeCategory;
-import com.simibubi.create.foundation.config.ConfigBase;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
 import com.simibubi.create.foundation.utility.Lang;
 import com.simibubi.create.infrastructure.config.AllConfigs;
@@ -32,7 +30,6 @@ import net.vechnimetel.industrialcastingcore.recipe.ModRecipeTypes;
 
 import java.util.*;
 import java.util.function.Consumer;
-import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.function.Supplier;
 
@@ -89,41 +86,9 @@ public class ModJEI implements IModPlugin {
             this.recipeClass = recipeClass;
         }
 
-        public CategoryBuilder<T> enableIf(Predicate<CRecipes> predicate) {
-            this.predicate = predicate;
-            return this;
-        }
-
-        public CategoryBuilder<T> enableWhen(Function<CRecipes, ConfigBase.ConfigBool> configValue) {
-            this.predicate = (c) -> (Boolean)((ConfigBase.ConfigBool)configValue.apply(c)).get();
-            return this;
-        }
-
         public CategoryBuilder<T> addRecipeListConsumer(Consumer<List<T>> consumer) {
             this.recipeListConsumers.add(consumer);
             return this;
-        }
-
-        public CategoryBuilder<T> addRecipes(Supplier<Collection<? extends T>> collection) {
-            return this.addRecipeListConsumer((recipes) -> recipes.addAll((Collection)collection.get()));
-        }
-
-        public CategoryBuilder<T> addAllRecipesIf(Predicate<Recipe<?>> pred) {
-            return this.addRecipeListConsumer((recipes) -> CreateJEI.consumeAllRecipes((recipe) -> {
-                if (pred.test(recipe)) {
-                    recipes.add((T) recipe);
-                }
-
-            }));
-        }
-
-        public CategoryBuilder<T> addAllRecipesIf(Predicate<Recipe<?>> pred, Function<Recipe<?>, T> converter) {
-            return this.addRecipeListConsumer((recipes) -> CreateJEI.consumeAllRecipes((recipe) -> {
-                if (pred.test(recipe)) {
-                    recipes.add((T) converter.apply(recipe));
-                }
-
-            }));
         }
 
         public CategoryBuilder<T> addTypedRecipes(IRecipeTypeInfo recipeTypeEntry) {
@@ -136,53 +101,6 @@ public class ModJEI implements IModPlugin {
                 Objects.requireNonNull(recipes);
                 CreateJEI.consumeTypedRecipes((t) -> recipes.add((T) t), (RecipeType)recipeType.get());
             });
-        }
-
-        public CategoryBuilder<T> addTypedRecipes(Supplier<RecipeType<? extends T>> recipeType, Function<Recipe<?>, T> converter) {
-            return this.addRecipeListConsumer((recipes) -> CreateJEI.consumeTypedRecipes((recipe) -> recipes.add((T) converter.apply(recipe)), (RecipeType)recipeType.get()));
-        }
-
-        public CategoryBuilder<T> addTypedRecipesIf(Supplier<RecipeType<? extends T>> recipeType, Predicate<Recipe<?>> pred) {
-            return this.addRecipeListConsumer((recipes) -> CreateJEI.consumeTypedRecipes((recipe) -> {
-                if (pred.test(recipe)) {
-                    recipes.add((T) recipe);
-                }
-
-            }, (RecipeType)recipeType.get()));
-        }
-
-        public CategoryBuilder<T> addTypedRecipesExcluding(Supplier<RecipeType<? extends T>> recipeType, Supplier<RecipeType<? extends T>> excluded) {
-            return this.addRecipeListConsumer((recipes) -> {
-                List<Recipe<?>> excludedRecipes = CreateJEI.getTypedRecipes((RecipeType)excluded.get());
-                CreateJEI.consumeTypedRecipes((recipe) -> {
-                    for(Recipe<?> excludedRecipe : excludedRecipes) {
-                        if (CreateJEI.doInputsMatch(recipe, excludedRecipe)) {
-                            return;
-                        }
-                    }
-
-                    recipes.add((T) recipe);
-                }, (RecipeType)recipeType.get());
-            });
-        }
-
-        public CategoryBuilder<T> removeRecipes(Supplier<RecipeType<? extends T>> recipeType) {
-            return this.addRecipeListConsumer((recipes) -> {
-                List<Recipe<?>> excludedRecipes = CreateJEI.getTypedRecipes((RecipeType)recipeType.get());
-                recipes.removeIf((recipe) -> {
-                    for(Recipe<?> excludedRecipe : excludedRecipes) {
-                        if (CreateJEI.doInputsMatch(recipe, excludedRecipe) && CreateJEI.doOutputsMatch(recipe, excludedRecipe)) {
-                            return true;
-                        }
-                    }
-
-                    return false;
-                });
-            });
-        }
-
-        public CategoryBuilder<T> removeNonAutomation() {
-            return this.addRecipeListConsumer((recipes) -> recipes.removeIf(AllRecipeTypes.CAN_BE_AUTOMATED.negate()));
         }
 
         public CategoryBuilder<T> catalystStack(Supplier<ItemStack> supplier) {
