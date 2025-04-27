@@ -2,9 +2,13 @@
   "item.industrial_casting_core.sugarcane_juice_bucket": "甘蔗汁桶",
   "fluid.industrial_casting_core.sugarcane_juice": "甘蔗汁",
   "block.industrial_casting_core.electrolysis": "高能处理台",
+  "block.industrial_casting_core.electric_motor": "电动马达",
+  "block.industrial_casting_core.kinetic_generator": "动能发电机",
   "create.recipe.electrolysis": "高能处理",
   "industrial_casting_core.recipe.assembly.electrolysis": "高能处理",
   "industrial_casting_core.tooltip.electrolysis.header": "高能处理台信息",
   "industrial_casting_core.tooltip.electrolysis.required_laser_level": "需要激光强度：%1$s",
-  "industrial_casting_core.tooltip.electrolysis.current_laser_level": "当前激光强度：%1$s"
+  "industrial_casting_core.tooltip.electrolysis.current_laser_level": "当前激光强度：%1$s",
+  "industrial_casting_core.tooltip.kinetic_generator.header": "动能发电机信息",
+  "industrial_casting_core.tooltip.kinetic_generator.generation": "电力产出量: %1$s"
 }

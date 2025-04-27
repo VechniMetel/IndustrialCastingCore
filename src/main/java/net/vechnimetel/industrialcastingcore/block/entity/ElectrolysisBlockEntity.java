@@ -53,7 +53,7 @@ public class ElectrolysisBlockEntity extends SmartBlockEntity implements IHaveGo
     private static final EnumProperty<ElectrolysisLightLevel> LIGHT_LEVEL = ModBlockStateProperties.LIGHT_LEVEL;
 
     public ElectrolysisBlockEntity(BlockPos pos, BlockState state) {
-        super(ModBlockEntities.ELECTROLYSIS.get(), pos, state);
+        super(ModBlockEntityTypes.ELECTROLYSIS.get(), pos, state);
     }
 
     @Override
@@ -156,9 +156,9 @@ public class ElectrolysisBlockEntity extends SmartBlockEntity implements IHaveGo
     public boolean addToGoggleTooltip(List<Component> tooltip, boolean isPlayerSneaking) {
         ModLang.builder().translate("tooltip.electrolysis.header").forGoggles(tooltip);
         ModLang.builder().translate("tooltip.electrolysis.required_laser_level",LASER_LEVEL_REQUIREMENT)
-                .style(ChatFormatting.YELLOW).forGoggles(tooltip);
+                .style(ChatFormatting.YELLOW).forGoggles(tooltip,1);
         ModLang.builder().translate("tooltip.electrolysis.current_laser_level",this.laserLevel)
-                .style(ChatFormatting.GREEN).forGoggles(tooltip);
+                .style(ChatFormatting.GREEN).forGoggles(tooltip,1);
         return true;
     }
 

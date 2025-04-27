@@ -2,9 +2,13 @@
   "item.industrial_casting_core.sugarcane_juice_bucket": "Sugarcane Juice Bucket",
   "fluid.industrial_casting_core.sugarcane_juice": "Sugarcane Juice",
   "block.industrial_casting_core.electrolysis": "High-Energy Processor",
+  "block.industrial_casting_core.electric_motor": "Electric Motor",
+  "block.industrial_casting_core.kinetic_generator": "Kinetic Generator",
   "create.recipe.electrolysis": "High-Energy Processing",
   "industrial_casting_core.recipe.assembly.electrolysis": "High-Energy Processing",
-  "industrial_casting_core.tooltip.electrolysis.header": "High-Energy Processing Info",
+  "industrial_casting_core.tooltip.electrolysis.header": "High-Energy Processor Info",
   "industrial_casting_core.tooltip.electrolysis.required_laser_level": "Required Laser Strength：%1$s",
-  "industrial_casting_core.tooltip.electrolysis.current_laser_level": "Current Laser Strength：%1$s"
+  "industrial_casting_core.tooltip.electrolysis.current_laser_level": "Current Laser Strength：%1$s",
+  "industrial_casting_core.tooltip.kinetic_generator.header": "Kinetic Generator Info",
+  "industrial_casting_core.tooltip.kinetic_generator.generation": "Electricity Generation: %1$s"
 }

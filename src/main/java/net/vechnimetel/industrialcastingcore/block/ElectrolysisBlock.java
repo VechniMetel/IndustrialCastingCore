@@ -22,7 +22,7 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.vechnimetel.industrialcastingcore.block.entity.ElectrolysisBlockEntity;
-import net.vechnimetel.industrialcastingcore.block.entity.ModBlockEntities;
+import net.vechnimetel.industrialcastingcore.block.entity.ModBlockEntityTypes;
 import net.vechnimetel.industrialcastingcore.block.state.properties.ElectrolysisLightLevel;
 import net.vechnimetel.industrialcastingcore.block.state.properties.ModBlockStateProperties;
 
@@ -71,7 +71,7 @@ public class ElectrolysisBlock extends Block implements IBE<ElectrolysisBlockEnt
 
     @Override
     public BlockEntityType<? extends ElectrolysisBlockEntity> getBlockEntityType() {
-        return ModBlockEntities.ELECTROLYSIS.get();
+        return ModBlockEntityTypes.ELECTROLYSIS.get();
     }
 
     @Override

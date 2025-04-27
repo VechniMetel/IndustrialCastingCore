@@ -16,6 +16,8 @@ public class ModBlocks {
 
     public static final RegistryObject<LiquidBlock> SUGARCANE_JUICE;
     public static final RegistryObject<ElectrolysisBlock> ELECTROLYSIS;
+    public static final RegistryObject<ElectricMotorBlock> ELECTRIC_MOTOR;
+    public static final RegistryObject<KineticGeneratorBlock> KINETIC_GENERATOR;
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
@@ -28,5 +30,7 @@ public class ModBlocks {
                 ModFluids.SUGARCANE_JUICE_SOURCE, BlockBehaviour.Properties.copy(Blocks.WATER)
         ));
         ELECTROLYSIS = BLOCKS.register("electrolysis", ElectrolysisBlock::new);
+        ELECTRIC_MOTOR = BLOCKS.register("electric_motor", ElectricMotorBlock::new);
+        KINETIC_GENERATOR = BLOCKS.register("kinetic_generator", KineticGeneratorBlock::new);
     }
 }
