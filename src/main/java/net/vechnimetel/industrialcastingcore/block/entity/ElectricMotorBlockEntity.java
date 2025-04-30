@@ -43,7 +43,7 @@ public class ElectricMotorBlockEntity extends GeneratingKineticBlockEntity imple
     @Override
     public float getGeneratedSpeed() {
         if(!this.on) return 0;
-        return convertToDirection(power*this.calculateAddedStressCapacity()*ENERGY_COEFFICIENT,
+        return convertToDirection(power*ENERGY_COEFFICIENT/this.calculateAddedStressCapacity(),
                 this.getBlockState().getValue(ElectricMotorBlock.HORIZONTAL_FACING));
     }
 
