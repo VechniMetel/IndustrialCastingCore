@@ -26,6 +26,7 @@ public class IndustrialCastingCore {
 
     public IndustrialCastingCore(FMLJavaModLoadingContext context) {
         IEventBus modEventBus = context.getModEventBus();
+        ModCreativeTab.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModFluidTypes.register(modEventBus);

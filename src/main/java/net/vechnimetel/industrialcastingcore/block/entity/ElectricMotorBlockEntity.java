@@ -28,7 +28,7 @@ public class ElectricMotorBlockEntity extends GeneratingKineticBlockEntity imple
     private int power = 0;
     private int prevPower = 0;
     private boolean on = false;
-    private final float STRESS_CAPACITY = 1.0F;
+    private final float STRESS_CAPACITY = 160.0F;
     private float ENERGY_COEFFICIENT = 1.0F;
 
     public ElectricMotorBlockEntity(BlockPos pos, BlockState state) {
