@@ -16,7 +16,7 @@ import java.util.List;
 
 public class KineticGeneratorBlockEntity extends KineticBlockEntity implements IPowerProducer {
     private static final float ENERGY_COEFFICIENT = 1.0f;
-    private static final float STRESS_IMPACT = 1.0f;
+    private static final float STRESS_IMPACT = 192.0f;
 
     private PowerGrid grid;
 
