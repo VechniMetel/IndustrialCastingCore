@@ -1,6 +1,5 @@
 package net.vechnimetel.industrialcastingcore.block.entity;
 
-import com.simibubi.create.content.kinetics.BlockStressValues;
 import com.simibubi.create.content.kinetics.base.GeneratingKineticBlockEntity;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import dev.dubhe.anvilcraft.api.power.IPowerConsumer;
@@ -11,6 +10,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.MenuProvider;
+import net.minecraft.world.entity.animal.Wolf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -95,8 +95,8 @@ public class ElectricMotorBlockEntity extends GeneratingKineticBlockEntity imple
                 this.notifyUpdate();
                 this.updateGeneratedRotation();
             }
-            if(on != ((this.grid!=null) && this.grid.isWork())) {
-                on = (this.grid!=null) && this.grid.isWork();
+            if(on != ((this.grid!=null) && this.grid.isWorking())) {
+                on = (this.grid!=null) && this.grid.isWorking();
                 this.notifyUpdate();
                 this.updateGeneratedRotation();
             }

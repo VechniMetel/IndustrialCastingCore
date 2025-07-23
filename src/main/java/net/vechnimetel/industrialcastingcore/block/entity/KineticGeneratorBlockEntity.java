@@ -1,6 +1,5 @@
 package net.vechnimetel.industrialcastingcore.block.entity;
 
-import com.simibubi.create.content.equipment.goggles.IHaveGoggleInformation;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntity;
 import dev.dubhe.anvilcraft.api.power.IPowerProducer;
 import dev.dubhe.anvilcraft.api.power.PowerGrid;
@@ -15,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class KineticGeneratorBlockEntity extends KineticBlockEntity implements IPowerProducer, IHaveGoggleInformation {
+public class KineticGeneratorBlockEntity extends KineticBlockEntity implements IPowerProducer {
     private static final float ENERGY_COEFFICIENT = 1.0f;
     private static final float STRESS_IMPACT = 1.0f;
 

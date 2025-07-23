@@ -3,7 +3,7 @@ package net.vechnimetel.industrialcastingcore.recipe;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeBuilder;
 import com.simibubi.create.content.processing.recipe.ProcessingRecipeSerializer;
 import com.simibubi.create.foundation.recipe.IRecipeTypeInfo;
-import com.simibubi.create.foundation.utility.Lang;
+import com.simibubi.create.foundation.utility.CreateLang;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.Container;
 import net.minecraft.world.item.crafting.Recipe;
@@ -29,7 +29,7 @@ public enum ModRecipeTypes implements IRecipeTypeInfo {
     private final Supplier<RecipeType<?>> type;
 
     ModRecipeTypes(Supplier<RecipeSerializer<?>> serializerSupplier) {
-        String name = Lang.asId(this.name());
+        String name = CreateLang.asId(this.name());
         this.id = ResourceLocation.fromNamespaceAndPath(IndustrialCastingCore.MODID, name);
         this.serializerObject = Registers.SERIALIZER_REGISTER.register(name, serializerSupplier);
         this.typeObject = Registers.TYPE_REGISTER.register(name, () -> RecipeType.simple(this.id));

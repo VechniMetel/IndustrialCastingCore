@@ -1,6 +1,6 @@
 package net.vechnimetel.industrialcastingcore.util;
 
-import com.simibubi.create.foundation.utility.LangBuilder;
+import net.createmod.catnip.lang.LangBuilder;
 import net.vechnimetel.industrialcastingcore.IndustrialCastingCore;
 
 public class ModLang {

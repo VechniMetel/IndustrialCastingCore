@@ -1,11 +1,5 @@
 package net.vechnimetel.industrialcastingcore;
 
-import com.simibubi.create.content.kinetics.crank.HandCrankBlockEntity;
-import dev.dubhe.anvilcraft.block.CreativeGeneratorBlock;
-import dev.dubhe.anvilcraft.block.RubyLaserBlock;
-import dev.dubhe.anvilcraft.block.entity.CreativeGeneratorBlockEntity;
-import dev.dubhe.anvilcraft.block.entity.RubyLaserBlockEntity;
-import dev.dubhe.anvilcraft.client.gui.screen.inventory.SliderScreen;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;

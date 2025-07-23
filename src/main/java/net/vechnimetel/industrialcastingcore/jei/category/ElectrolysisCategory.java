@@ -3,7 +3,7 @@ package net.vechnimetel.industrialcastingcore.jei.category;
 import com.simibubi.create.compat.jei.category.CreateRecipeCategory;
 import com.simibubi.create.content.processing.recipe.ProcessingOutput;
 import com.simibubi.create.foundation.gui.AllGuiTextures;
-import com.simibubi.create.foundation.utility.Lang;
+import com.simibubi.create.foundation.utility.CreateLang;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
@@ -32,7 +32,7 @@ public class ElectrolysisCategory extends CreateRecipeCategory<ElectrolysisRecip
                 .addIngredients((Ingredient)recipe.getIngredients().get(1));
 
         slot.addTooltipCallback((recipeSlotView, tooltip) ->
-                tooltip.add(1, Lang.translateDirect("recipe.deploying.not_consumed")
+                tooltip.add(1, CreateLang.translateDirect("recipe.deploying.not_consumed")
                         .withStyle(ChatFormatting.GOLD)));
 
         ProcessingOutput output = recipe.getRollableResults().get(0);

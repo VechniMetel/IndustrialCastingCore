@@ -2,8 +2,8 @@ package net.vechnimetel.industrialcastingcore.render;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.simibubi.create.content.kinetics.base.KineticBlockEntityRenderer;
-import com.simibubi.create.foundation.render.CachedBufferer;
-import com.simibubi.create.foundation.render.SuperByteBuffer;
+import net.createmod.catnip.render.CachedBuffers;
+import net.createmod.catnip.render.SuperByteBuffer;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
@@ -33,6 +33,6 @@ public class KineticGeneratorRenderer extends KineticBlockEntityRenderer<Kinetic
 
     @Override
     protected SuperByteBuffer getRotatedModel(KineticGeneratorBlockEntity be, BlockState state) {
-        return CachedBufferer.block(KineticBlockEntityRenderer.KINETIC_BLOCK, state);
+        return CachedBuffers.block(KineticBlockEntityRenderer.KINETIC_BLOCK, state);
     }
 }

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "industrial_casting_core:block/electrolysis"
+      "model": "industrial_casting_core:block/electric_motor"
     }
   }
 }

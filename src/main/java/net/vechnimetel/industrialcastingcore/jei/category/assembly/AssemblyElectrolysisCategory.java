@@ -4,7 +4,7 @@ import com.mojang.blaze3d.vertex.PoseStack;
 import com.simibubi.create.compat.jei.category.CreateRecipeCategory;
 import com.simibubi.create.compat.jei.category.sequencedAssembly.SequencedAssemblySubCategory;
 import com.simibubi.create.content.processing.sequenced.SequencedRecipe;
-import com.simibubi.create.foundation.utility.Lang;
+import com.simibubi.create.foundation.utility.CreateLang;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
 import mezz.jei.api.gui.builder.IRecipeSlotBuilder;
 import mezz.jei.api.recipe.IFocusGroup;
@@ -30,7 +30,7 @@ public class AssemblyElectrolysisCategory extends SequencedAssemblySubCategory {
                 .addIngredients((Ingredient)recipe.getRecipe().getIngredients().get(1));
 
         slot.addTooltipCallback((recipeSlotView, tooltip) ->
-                tooltip.add(1, Lang.translateDirect("recipe.deploying.not_consumed")
+                tooltip.add(1, CreateLang.translateDirect("recipe.deploying.not_consumed")
                         .withStyle(ChatFormatting.GOLD)));
     }
 
