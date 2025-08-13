@@ -137,6 +137,7 @@ repositories {
     maven { url = "https://maven.blamejared.com/" }
     maven { url = "https://maven.createmod.net/" }
     maven { url = "https://maven2.bai.lol" }
+    maven { url = "https://modmaven.dev" }
 }
 
 dependencies {
@@ -154,6 +155,7 @@ dependencies {
     implementation fg.deobf("dev.dubhe:anvilcraft-forge-1.20.1:1.4.1+pre-release.2")
     implementation fg.deobf("dev.anvilcraft.lib:anvillib-forge-1.20.1:1.0.0+build.99")
     implementation fg.deobf("dev.engine-room.flywheel:flywheel-forge-1.20.1:1.0.0-beta-177")
+    implementation fg.deobf("top.theillusivec4.curios:curios-forge:5.14.1+1.20.1")
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
