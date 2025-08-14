@@ -11,5 +11,7 @@
   "block.industrial_casting_core.electric_motor": "电动马达",
   "industrial_casting_core.tooltip.kinetic_generator.generation": "电力产出量: %1$s",
   "block.industrial_casting_core.kinetic_generator": "动能发电机",
-  "industrial_casting_core.tooltip.kinetic_generator.header": "动能发电机信息"
+  "industrial_casting_core.tooltip.kinetic_generator.header": "动能发电机信息",
+  "item.industrial_casting_core.leaf_language_pendant": "叶语吊坠",
+  "curios.identifier.amulet": "吊坠"
 }

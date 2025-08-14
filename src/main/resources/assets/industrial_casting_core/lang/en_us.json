@@ -11,5 +11,7 @@
   "block.industrial_casting_core.electric_motor": "Electric Motor",
   "industrial_casting_core.tooltip.kinetic_generator.generation": "Electricity Generation: %1$s",
   "block.industrial_casting_core.kinetic_generator": "Kinetic Generator",
-  "industrial_casting_core.tooltip.kinetic_generator.header": "Kinetic Generator Info"
+  "industrial_casting_core.tooltip.kinetic_generator.header": "Kinetic Generator Info",
+  "item.industrial_casting_core.leaf_language_pendant": "Leaf Language Pendant",
+  "curios.identifier.amulet": "Pendant"
 }

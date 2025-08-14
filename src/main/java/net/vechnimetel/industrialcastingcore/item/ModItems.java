@@ -1,5 +1,6 @@
 package net.vechnimetel.industrialcastingcore.item;
 
+import com.tterrag.registrate.util.entry.ItemProviderEntry;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
@@ -18,6 +19,7 @@ public class ModItems {
     public static final RegistryObject<ElectrolysisBlockItem> ELECTROLYSIS;
     public static final RegistryObject<BlockItem> ELECTRIC_MOTOR;
     public static final RegistryObject<BlockItem> KINETIC_GENERATOR;
+    public static final RegistryObject<Item> LEAF_LANGUAGE_PENDANT;
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
@@ -34,5 +36,7 @@ public class ModItems {
                 () -> new BlockItem(ModBlocks.ELECTRIC_MOTOR.get(),new Item.Properties()));
         KINETIC_GENERATOR = ITEMS.register("kinetic_generator",
                 () -> new BlockItem(ModBlocks.KINETIC_GENERATOR.get(),new Item.Properties()));
+        LEAF_LANGUAGE_PENDANT= ITEMS.register("leaf_language_pendant",
+                () -> new Item(new Item.Properties()));
     }
 }

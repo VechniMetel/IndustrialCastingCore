@@ -1,0 +1,10 @@
+{
+  "add_cosmetic": false,
+  "icon": "industrial_casting_core:slot/amulet",
+  "operation": "SET",
+  "order": 45,
+  "render_toggle": true,
+  "replace": false,
+  "size": 1,
+  "use_native_gui": true
+}
