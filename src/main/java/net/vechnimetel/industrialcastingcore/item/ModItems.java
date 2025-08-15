@@ -37,6 +37,6 @@ public class ModItems {
         KINETIC_GENERATOR = ITEMS.register("kinetic_generator",
                 () -> new BlockItem(ModBlocks.KINETIC_GENERATOR.get(),new Item.Properties()));
         LEAF_LANGUAGE_PENDANT= ITEMS.register("leaf_language_pendant",
-                () -> new Item(new Item.Properties()));
+                LeafLanguagePendantItem::new);
     }
 }
